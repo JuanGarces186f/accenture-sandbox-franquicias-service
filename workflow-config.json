@@ -1,18 +1,18 @@
 {
   "dev": {
-    "gcp_project_id": "jpablog-sandbox",
-    "gcp_region": "us-central1",
-    "artifact_registry_region": "us-central1",
-    "repository_name": "accenture-sandbox-backend-repo",
-    "service_name": "franquicias-service-dev",
-    "image_url": "us-central1-docker.pkg.dev/jpablog-sandbox/accenture-sandbox-backend-repo/franquicias-service-dev:latest"
-  },
-  "prod": {
     "gcp_project_id": "mi-proyecto-prod",
     "gcp_region": "us-central1",
     "artifact_registry_region": "us-central1",
-    "repository_name": "backend",
+    "repository_name": "backend-dev",
     "service_name": "demo",
-    "image_url": "us-central1-docker.pkg.dev/mi-proyecto-prod/backend/demo:latest"
+    "image_url": "us-central1-docker.pkg.dev/mi-proyecto-dev/backend-dev/demo:latest"
+  },
+  "prod": {
+    "gcp_project_id": "jpablog-accenture-sandbox",
+    "gcp_region": "us-central1",
+    "artifact_registry_region": "us-central1",
+    "repository_name": "accenture-sandbox-backend-repo-prod",
+    "service_name": "franquicias-service-prod",
+    "image_url": "us-central1-docker.pkg.dev/jpablog-accenture-sandbox/accenture-sandbox-backend-repo-prod/franquicias-service-prod:latest"
   }
 }
