@@ -1,0 +1,16 @@
+# Sobreescribe application.yaml principal durante los tests.
+# Redirige al perfil "test" que usa H2, ignorando las variables DB_* de PostgreSQL.
+spring:
+  profiles:
+    active: test
+
+server:
+  port: 8080
+  servlet:
+    context-path: /franquicias-service
+
+
+logging:
+  level:
+    com.sandbox.accenture.franquicias_service: WARN
+    org.hibernate.SQL: WARN
