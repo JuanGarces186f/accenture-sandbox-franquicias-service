@@ -23,11 +23,12 @@ public class SwaggerConfig {
                                 .name("Accenture Sandbox")))
                 .servers(List.of(
                         new Server()
-                                .url("http://localhost:8080/franquicias-service")
-                                .description("Entorno de desarrollo — http://localhost:8080"),
-                        new Server()
                                 .url("https://franquicias-service-prod-209503874304.us-central1.run.app/franquicias-service")
-                                .description("Entorno GCP — PostgreSQL Cloud SQL")
+                                .description("Entorno GCP — PostgreSQL Cloud SQL"),
+                        new Server()
+                                .url("http://localhost:8080/franquicias-service")
+                                .description("Entorno de desarrollo — http://localhost:8080")
+
                 ));
     }
 }
