@@ -12,12 +12,12 @@ build/
 .settings/
 bin/
 
+
 # IntelliJ IDEA
 .idea/
 *.iml
 *.ipr
 *.iws
-out/
 
 # VS Code
 .vscode/
