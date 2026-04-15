@@ -326,6 +326,9 @@ Se optó por un UseCase por agregado (`FranquiciaUseCaseImpl`, `SucursalUseCaseI
 #### Endpoints de recursos anidados vs. controladores planos
 La creación de sucursales (`POST /franquicias/{id}/sucursales`) y la consulta de top-stock (`GET /franquicias/{id}/productos/top-stock`) se ubicaron en `FranquiciaController` por su naturaleza jerárquica REST. La gestión de productos (agregar, eliminar, actualizar) se distribuye entre `SucursalController` y `ProductoController` según el recurso principal afectado. Esta es una decisión opinada donde existen argumentos para otras organizaciones.
 
+#### Sin programación reactiva (WebFlux)
+La prueba técnica menciona programación reactiva como punto deseable. Sin embargo, tomé la decisión consciente de implementar la solución con el stack **imperativo (Spring MVC / Spring Data JPA)**, ya que actualmente no cuento con experiencia práctica en **Project Reactor** ni en **Spring WebFlux**. Consideré que entregar una solución sólida, bien estructurada y con buenas prácticas en el paradigma que domino era más honesto y de mayor valor que intentar una implementación reactiva superficial o incorrecta. Es un área que tengo identificada para profundizar.
+
 #### Sin paginación
 Los endpoints de listado no implementan paginación. En producción con volúmenes reales de datos sería necesario agregar `Pageable` de Spring Data.
 
